@@ -66,7 +66,7 @@ body
     grid-template-rows: repeat(var(--rowNum), 1fr);
 }
 
-.button
+#button
 {
     padding-top: 5px;
     color: #dff9fb;
@@ -76,7 +76,7 @@ body
     font-family: 'Montserrat', sans-serif;
 }
 
-.button:hover
+#button:hover
 {
     color:#130f40;
     background-color: #dff9fb;

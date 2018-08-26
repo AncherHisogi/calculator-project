@@ -1,25 +1,87 @@
 var topDisplay = document.getElementById("topDisplay");
 var botDisplay = document.getElementById("botDisplay");
+var numbers = [];
+var x;
+var y; //switch variable for the buttons
+var z; //result variable for function eq
 
-const buttonC = document.getElementById("buttonC");
-const buttonPlusMinus = document.getElementById("buttonPlusMinus");
-const buttonPerc = document.getElementById("buttonPerc");
-const buttonSqrt = document.getElementById("buttonSqrt");
-const button7 = document.getElementById("button7");
-const button8 = document.getElementById("button8");
-const button9 = document.getElementById("button9");
-const buttonDevi = document.getElementById("buttonDevi");
-const button4 = document.getElementById("button4");
-const button5 = document.getElementById("button5");
-const button6 = document.getElementById("button6");
-const buttonX = document.getElementById("buttonX");
-const button1 = document.getElementById("button1");
-const button2 = document.getElementById("button2");
-const button3 = document.getElementById("button3");
-const buttonMin = document.getElementById("buttonMin");
-const button0 = document.getElementById("button0");
-const button00 = document.getElementById("button00");
-const buttonDot = document.getElementById("buttonDot");
-const buttonPlus = document.getElementById("buttonPlus");
 
+function insert(num)
+{
+    topDisplay.innerHTML = topDisplay.innerHTML+num;
+    x = topDisplay.innerHTML;
+    x = parseFloat(x);
+}
+
+function clean()
+{
+    topDisplay.innerHTML = "";
+    numbers = [];
+}
+
+function eq()
+{
+    numbers.push(x);
+    console.log("numbers: "+numbers);
+    calc(y);
+    console.log("eq last="+z);
+    numbers.length = 0;
+    numbers[0] = z;
+    topDisplay.innerHTML = "";
+    console.log("current array"+numbers);
+    botDisplay.innerHTML = z;
+}
+
+function operator()
+{
+    
+    
+        if (topDisplay.innerHTML == "")
+        {
+            console.log("nothing")
+        }
+            else
+            {
+                numbers.push(x);
+                topDisplay.innerHTML = "";
+            }
+            
+    calc.apply(null, arguments);
+}
+
+function calc(num1)
+{
+    y = num1;
+    switch(y)
+    {
+        case 1:
+            z = numbers[0]+numbers[1];
+            console.log("plus");
+            break;
+        case 2:
+            z = numbers[0]-numbers[1];
+            console.log("minus");
+            break;
+        case 3:
+            z = numbers[0]*numbers[1];
+            console.log("multiply");
+            break;
+        case 4:
+            if(numbers[1] == "0")
+                {
+                    numbers[1] = "";
+                }
+            else 
+                {
+                z = numbers[0]/numbers[1];
+                }
+            console.log("devide");
+            break;
+        case 5:
+            console.log("percentage"); 
+            break;
+        
+    }
+    
+}
 

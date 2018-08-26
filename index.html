@@ -9,31 +9,31 @@
 </head>
 <body background="photo-blurred.jpg">
 <div id=display>
-    <div id=topDisplay>9+10</div>
-    <div id=botDisplay>21</div>
+    <div id=topDisplay></div>
+    <div id=botDisplay></div>
 </div>
 <div id=container>
     <div id=grid>
-        <div id="buttonC" class="button">C</div>
-        <div id="buttonPlusMinus" class="button">+/-</div>
-        <div id="buttonPerc" class="button">%</div>
-        <div id="buttonSqrt" class="button">√</div>
-        <div id="button7" class="button">7</div>
-        <div id="button8" class="button">8</div>
-        <div id="button9" class="button">9</div>
-        <div id="buttonDevi" class="button">/</div>
-        <div id="button4" class="button">4</div>
-        <div id="button5" class="button">5</div>
-        <div id="button6" class="button">6</div>
-        <div id="buttonX" class="button">X</div>
-        <div id="button1" class="button">1</div>
-        <div id="button2" class="button">2</div>
-        <div id="button3" class="button">3</div>
-        <div id="buttonMin" class="button">-</div>
-        <div id="button0" class="button">0</div>
-        <div id="button00" class="button">00</div>
-        <div id="buttonDot" class="button">.</div>
-        <div id="buttonPlus" class="button">+</div>
+        <div id="button" onclick="clean()">C</div>
+        <div id="button" >+/-</div>
+        <div id="button" onclick="operator(5)">%</div>
+        <div id="button" onclick="operator(4)">/</div>
+        <div id="button" onclick="insert(7)">7</div>
+        <div id="button" onclick="insert(8)">8</div>
+        <div id="button" onclick="insert(9)">9</div>
+        <div id="button" onclick="operator(3)">*</div>
+        <div id="button" onclick="insert(4)">4</div>
+        <div id="button" onclick="insert(5)">5</div>
+        <div id="button" onclick="insert(6)">6</div>
+        <div id="button" onclick="operator(2)">-</div>
+        <div id="button" onclick="insert(1)" >1</div>
+        <div id="button" onclick="insert(2)">2</div>
+        <div id="button" onclick="insert(3)">3</div>
+        <div id="button" onclick="operator(1)">+</div>
+        <div id="button" onclick="insert(0)">0</div>
+        <div id="button" onclick="insert(00)"">00</div>
+        <div id="button" >.</div>
+        <div id="button" onclick="eq()">=</div>
         </div>
     </div>
 </div>
