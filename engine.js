@@ -13,6 +13,13 @@ function insert(num)
     x = parseFloat(x);
 }
 
+
+function dot()
+{
+    topDisplay.innerHTML = topDisplay.innerHTML+".";
+    console.log("dot");
+}
+
 function clean()
 {
     topDisplay.innerHTML = "";
@@ -21,15 +28,22 @@ function clean()
 
 function eq()
 {
-    numbers.push(x);
-    console.log("numbers: "+numbers);
-    calc(y);
-    console.log("eq last="+z);
-    numbers.length = 0;
-    numbers[0] = z;
-    topDisplay.innerHTML = "";
-    console.log("current array"+numbers);
-    botDisplay.innerHTML = z;
+    if(numbers.length == 0)
+        {
+            location.reload();
+        }
+    else
+    {
+        numbers.push(x);
+        console.log("numbers: "+numbers);
+        calc(y);
+        console.log("eq last="+z);
+        numbers.length = 0;
+        numbers[0] = z;
+        topDisplay.innerHTML = "";
+        console.log("current array"+numbers);
+        botDisplay.innerHTML = z;
+    }
 }
 
 function operator()
@@ -47,6 +61,11 @@ function operator()
             }
             
     calc.apply(null, arguments);
+}
+
+function negative()
+{
+    topDisplay.innerHTML = "-"+topDisplay.innerHTML;
 }
 
 function calc(num1)
@@ -67,21 +86,25 @@ function calc(num1)
             console.log("multiply");
             break;
         case 4:
+
             if(numbers[1] == "0")
                 {
-                    numbers[1] = "";
+                    location.reload();
                 }
             else 
                 {
-                z = numbers[0]/numbers[1];
+                    z = numbers[0]/numbers[1];
                 }
+
             console.log("devide");
             break;
+
         case 5:
-            console.log("percentage"); 
+            z = Math.sqrt(numbers[0]);
+            topDisplay.innerHTML = topDisplay.innerHTML+"√";
+            console.log("sqrt"); 
             break;
-        
+
     }
-    
 }
 
