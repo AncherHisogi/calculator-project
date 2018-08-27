@@ -29,9 +29,9 @@ function clean()
 function eq()
 {
     if(numbers.length == 0)
-        {
-            location.reload();
-        }
+    {
+        location.reload();
+    }
     else
     {
         numbers.push(x);
@@ -48,17 +48,17 @@ function eq()
 
 function operator()
 {
-    
-    
-        if (topDisplay.innerHTML == "")
-        {
-            console.log("nothing")
-        }
-            else
-            {
-                numbers.push(x);
-                topDisplay.innerHTML = "";
-            }
+    if (topDisplay.innerHTML == "")
+
+    {
+        console.log("nothing")
+    }
+
+    else
+    {
+        numbers.push(x);
+        topDisplay.innerHTML = "";
+    }
             
     calc.apply(null, arguments);
 }
@@ -101,7 +101,7 @@ function calc(num1)
 
         case 5:
             z = Math.sqrt(numbers[0]);
-            topDisplay.innerHTML = topDisplay.innerHTML+"√";
+            topDisplay.innerHTML = z;
             console.log("sqrt"); 
             break;
 
